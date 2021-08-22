@@ -13,7 +13,7 @@ import android.widget.Button;
 import java.security.Provider;
 
 public class MainActivity extends AppCompatActivity {
-    private Button Button1,Button2;
+    private Button btn1,btn2;
 
 
 
@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button1 = (Button) findViewById(R.id.button1);
-        Button2 = (Button) findViewById(R.id.button2);
+        btn1 = (Button) findViewById(R.id.button1);
+        btn2 = (Button) findViewById(R.id.button2);
 
-        Button1.setOnClickListener(new View.OnClickListener() {
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startService(new Intent(MainActivity.this,MyServices.class));
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button2.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 stopService(new Intent(MainActivity.this,MyServices.class));
